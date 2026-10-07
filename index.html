@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poly Track Lite</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hud">
+        <div class="brand">
+          <p class="eyebrow">Personal-Use Prototype</p>
+          <h1>POLY TRACK LITE</h1>
+        </div>
+        <div class="stats">
+          <div class="card">
+            <span class="label">Track</span>
+            <strong id="trackValue">1 / 6</strong>
+          </div>
+          <div class="card">
+            <span class="label">Speed</span>
+            <strong id="speedValue">0</strong>
+          </div>
+          <div class="card">
+            <span class="label">Lap</span>
+            <strong id="lapValue">1 / 3</strong>
+          </div>
+          <div class="card">
+            <span class="label">Time</span>
+            <strong id="timeValue">0.0s</strong>
+          </div>
+        </div>
+        <div class="controls">
+          <label class="picker">
+            <span class="label">Select Track</span>
+            <select id="trackSelect" aria-label="Select track"></select>
+          </label>
+          <button id="resetButton" type="button" class="ghost">Restart Track</button>
+        </div>
+      </section>
+
+      <section class="game-frame">
+        <canvas id="gameCanvas" width="1280" height="720" aria-label="Poly Track Lite game"></canvas>
+        <div class="overlay" id="overlay">
+          <div class="panel">
+            <p class="eyebrow">Simple low-poly racer</p>
+            <h2>Race the neon circuit</h2>
+            <p class="track-name" id="trackName">Starter Bend</p>
+            <p id="overlayBody">
+              Steer with <kbd>A</kbd>/<kbd>D</kbd> or <kbd>Left</kbd>/<kbd>Right</kbd>.
+              Accelerate with <kbd>W</kbd>/<kbd>Up</kbd>. Brake with <kbd>S</kbd>/<kbd>Down</kbd>.
+            </p>
+            <button id="startButton" type="button">Start Run</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
